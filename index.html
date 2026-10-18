@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سایت من</title>
+<style>
+
+</style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>پرچم ایران</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: Tahoma, sans-serif;
+    background: #000;
+    color: #fff;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 28px; padding: 24px; overflow: hidden;
+  }
+  #stars { position: fixed; inset: 0; z-index: 0; }
+  .star { position: absolute; width: 2px; height: 2px; background: #fff; border-radius: 50%;
+          opacity: .12; animation: tw 3s ease-in-out infinite; }
+  @keyframes tw { 50% { opacity: .8; } }
+
+  header { position: relative; z-index: 1; text-align: center; }
+  h1 {
+    font-size: clamp(26px, 6vw, 52px); font-weight: 900; line-height: 1.5;
+    background: linear-gradient(90deg, #2ecc71, #fff 50%, #ff3b3b);
+    background-size: 200% auto;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: shine 5s linear infinite;
+  }
+  h2 { font-size: clamp(16px, 3.5vw, 26px); font-weight: 500; color: #d9e8df; }
+  .line { width: 120px; height: 3px; margin: 12px auto 0; border-radius: 3px;
+          background: linear-gradient(90deg, #239f40, #fff, #da0000); }
+  @keyframes shine { to { background-position: 200% center; } }
+
+  .flag-wrap { position: relative; z-index: 1; width: min(80vw, 440px);
+               filter: drop-shadow(0 0 30px rgba(255,255,255,.18)); }
+  .flag-wrap img { width: 100%; height: auto; display: block; }
+
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+</head>
+<body>
+<div id="stars"></div>
+
+<header>
+  <h1>ابوالفضل هدایتی 9/4</h1>
+  <h2>مدرسه شهدای اکبر آباد</h2>
+  <div class="line"></div>
+</header>
+
+<div class="flag-wrap">
+  <img alt="نقشه ایران" src="https://i.ibb.co/tnfVDN8/file-00000000d00c8210acd3b7eb357dbb12.png">
+</div>
+
+<script>
+  const s = document.getElementById("stars");
+  for (let i = 0; i < 90; i++) {
+    const d = document.createElement("div");
+    d.className = "star";
+    d.style.left = Math.random() * 100 + "%";
+    d.style.top = Math.random() * 100 + "%";
+    d.style.animationDelay = (Math.random() * 3) + "s";
+    s.appendChild(d);
+  }
+</script>
+</body>
+</html>
+<script>
+
+</script>
+</body>
+</html>
